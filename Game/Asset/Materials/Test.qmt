@@ -1,5 +1,5 @@
 {
-    "Default material": {
+    "Test": {
         "checkLight": true,
         "color": {
             "value0": 1.0,

@@ -24,7 +24,7 @@
         },
         "shininess": 128.0,
         "hasSkeleton": true,
-        "colorTexture": "../../Game/Asset/Texture/Bartender.png",
+        "colorTexture": "./Asset/Texture/Bard.png",
         "diffuseTexture": "",
         "specularTexture": "",
         "normalMap": ""

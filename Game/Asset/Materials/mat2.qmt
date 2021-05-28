@@ -24,7 +24,7 @@
         },
         "shininess": 128.0,
         "hasSkeleton": false,
-        "colorTexture": "../../Game/Asset/Texture/Floor_C.jpg",
+        "colorTexture": "./Asset/Texture/Floor_C.jpg",
         "diffuseTexture": "",
         "specularTexture": "",
         "normalMap": ""
