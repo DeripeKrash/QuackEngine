@@ -23,6 +23,7 @@
 #include "Scene/System/RenderSystem.hpp"
 #include "Scene/System/LightSystem.hpp"
 #include "Scene/System/CharacterControllerSystem.hpp"
+#include "Scene/System/ParticleSystem.hpp"
 
 
 #include "Scene/System/AnimatorSystem.hpp"
@@ -46,7 +47,7 @@ void Game::Init(Engine &engine) const
     world.RegisterComponent<Component::RigidBody>();
     world.RegisterComponent<Component::CharacterController>();
     world.RegisterComponent<Component::Animator>();
-    //world.RegisterComponent<C>()
+    world.RegisterComponent<Component::ParticleEmitter>();
 
     world.RegisterComponent<EnemyComponent>();
     world.RegisterComponent<PlayerComponent>();
@@ -60,6 +61,7 @@ void Game::Init(Engine &engine) const
     auto physicsSystem = world.RegisterSystem<PhysicsSystem>();
     auto characterControllerSystem = world.RegisterSystem<CharacterControllerSystem>();
     auto animatorSystem = world.RegisterSystem<AnimatorSystem>();
+    auto particleSystem = world.RegisterSystem<ParticleSystem>();
     auto playerSystem = world.RegisterSystem<PlayerSystem>();
 
     auto noteDisplaySystem = world.RegisterSystem<EnemyManagerSystem>();
@@ -130,6 +132,14 @@ void Game::Init(Engine &engine) const
         world.SetSystemSignature<PlayerSystem>(signaturePlayer);
     }
 
+    //signature player
+    {
+        Signature signatureParticle;
+        signatureParticle.set(world.GetComponentType<Component::Transform>());
+        signatureParticle.set(world.GetComponentType<PlayerComponent>());
+        world.SetSystemSignature<ParticleSystem>(signatureParticle);
+    }
+
     engine.LoadWorld(world);
     engine.GetResourcesManager().LoadFolder(R"(./Asset)");
     physicsSystem->Init();
@@ -143,15 +153,22 @@ void Game::Init(Engine &engine) const
 
 
     Entity id = world.CreateEntity("Tartiflette");
-    PlayerComponent pl;
+
     Component::Transform t {Maths::Vector3f::Zero(),Maths::Vector3f::One(),Maths::Quaternion::Identity()};
+
+    Shader shader = Shader::LoadShader("./Shader/PostProcess/FadingParticule.qsh");
+    Texture texture;
+
+    Component::ParticleEmitter particleEmitter(100, 10, shader, texture);
     world.AddComponent(id, t);
-    world.AddComponent(id, pl);
+    world.AddComponent(id, particleEmitter);
 
     RendererPlatform::ClearColor({0.5f, 0.5f, 0.5f, 0.0f});
 
     Renderer::RendererPlatform::EnableDepthBuffer(true);
 
+    Renderer::ParticleProcess* particleProcess = new ParticleProcess();
+    engine.GetPostProcessManager().AddProcess(particleProcess);
 }
 
 void Game::Update(float deltaTime)

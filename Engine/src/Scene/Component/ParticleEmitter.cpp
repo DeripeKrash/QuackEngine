@@ -7,6 +7,8 @@
 #include "Renderer/Shader.hpp"
 #include "Renderer/Framebuffer.hpp"
 
+#include "Scene/System/CameraSystem.hpp"
+
 using namespace Component;
 using namespace Renderer;
 
@@ -29,6 +31,12 @@ void ParticleEmitter::Process(const Renderer::Framebuffer &buffer, const Rendere
 
     buffer.Bind();
     _shader.Use();
+    _texture.Bind();
+
+    Component::Camera &camera = Engine::Instance().GetCurrentWorld().GetSystem<CameraSystem>()->GetActiveCamera();
+
+    _shader.SetMatrix4("projection", camera.GetProjection());
+    _shader.SetMatrix4("view", camera.GetView());
 
     for (unsigned int i = 0; i < _listParticle.size(); i++)
     {
@@ -52,5 +60,8 @@ void ParticleEmitter::ResetParticle(Particle &particle)
 
 void ParticleEmitter::DrawParticle(const Particle &particle, const Renderer::Mesh &screenMesh)
 {
-    //_shader.SetVector3f()
+    _shader.SetVector4f("color", particle.color);
+    _shader.SetMatrix4("model", Maths::Matrix4::Translate(particle.position));
+
+    screenMesh.Draw();
 }

@@ -14,9 +14,9 @@ namespace Renderer
 
     struct Particle
     {
-        Maths::Color3f color        {1, 1, 1};
-        Maths::Vector3f position    {1, 1, 1};
-        Maths::Vector3f direction   {1, 1, 1};
+        Maths::Color4f color        {1.f, 1.f, 1.f, 1.f};
+        Maths::Vector3f position    {1.f, 1.f, 1.f};
+        Maths::Vector3f direction   {1.f, 1.f, 1.f};
         float life                  {1.0f};
     };
 
