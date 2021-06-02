@@ -1,5 +1,5 @@
 {
-    "AnimationMaterial": {
+    "AnimationBard": {
         "checkLight": true,
         "color": {
             "x": 1.0,
@@ -24,7 +24,7 @@
         },
         "shininess": 128.0,
         "hasSkeleton": true,
-        "colorTexture": "./Asset/Texture/Bard.png",
+        "colorTexture": "./Asset/Texture/Bartender.png",
         "diffuseTexture": "",
         "specularTexture": "",
         "normalMap": ""

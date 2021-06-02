@@ -23,7 +23,7 @@
             "z": 1.0
         },
         "shininess": 128.0,
-        "hasSkeleton": false,
+        "hasSkeleton": true,
         "colorTexture": "",
         "diffuseTexture": "",
         "specularTexture": "",
