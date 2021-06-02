@@ -1,6 +1,6 @@
 {
     "Default material": {
-        "checkLight": true,
+        "checkLight": false,
         "color": {
             "value0": 1.0,
             "value1": 1.0,
