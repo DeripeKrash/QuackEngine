@@ -1,10 +1,10 @@
 {
-    "mat2": {
+    "GreenLeef": {
         "checkLight": true,
         "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
+            "x": 0.16592882573604585,
+            "y": 0.44607841968536379,
+            "z": 0.01311996579170227,
             "w": 1.0
         },
         "ambient": {
@@ -24,7 +24,7 @@
         },
         "shininess": 128.0,
         "hasSkeleton": false,
-        "colorTexture": "./Asset/Texture/Floor_C.jpg",
+        "colorTexture": "",
         "diffuseTexture": "",
         "specularTexture": "",
         "normalMap": ""
