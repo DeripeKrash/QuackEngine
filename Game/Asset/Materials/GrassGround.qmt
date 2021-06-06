@@ -1,0 +1,32 @@
+{
+    "GrassGround": {
+        "checkLight": true,
+        "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+        },
+        "ambient": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "diffuse": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "specular": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "shininess": 128.0,
+        "hasSkeleton": false,
+        "colorTexture": "./Asset/Ground/PFK_Texture_Ground_Grass_01.png",
+        "diffuseTexture": "",
+        "specularTexture": "",
+        "normalMap": "./Asset/Ground/PFK_Texture_Ground_Base_Normals.png"
+    }
+}
