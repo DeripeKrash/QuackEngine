@@ -1,0 +1,32 @@
+{
+    "GrassFloor": {
+        "checkLight": true,
+        "color": {
+            "x": 0.17805646359920503,
+            "y": 0.46568626165390017,
+            "z": 0.0,
+            "w": 1.0
+        },
+        "ambient": {
+            "x": 1.0,
+            "y": 0.9999899864196777,
+            "z": 0.9999899864196777
+        },
+        "diffuse": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "specular": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "shininess": 118.30000305175781,
+        "hasSkeleton": false,
+        "colorTexture": "./Asset/Texture/Leaves_Generic_Texture.png",
+        "diffuseTexture": "",
+        "specularTexture": "",
+        "normalMap": ""
+    }
+}
