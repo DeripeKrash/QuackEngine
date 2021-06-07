@@ -1,5 +1,5 @@
 {
-    "Player": {
+    "WallDungeon": {
         "checkLight": true,
         "color": {
             "x": 1.0,
@@ -23,10 +23,10 @@
             "z": 1.0
         },
         "shininess": 128.0,
-        "hasSkeleton": true,
-        "colorTexture": "./Asset/Texture/Bard.png",
+        "hasSkeleton": false,
+        "colorTexture": "./Asset/Texture/Dungeon/PolygonFantasyKingdon_Texture_Wall_Dungeon_01.png",
         "diffuseTexture": "",
         "specularTexture": "",
-        "normalMap": ""
+        "normalMap": "./Asset/Texture/Dungeon/PolygonFantasyKingdon_Texture_Wall_Dungeon_Normal.png"
     }
 }
