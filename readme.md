@@ -1,5 +1,11 @@
 # Quack engine
 
+## Information
+
+Quack Engine is a game engine made in 5 months as a student project
+
+[Showcase video](https://youtu.be/FZiCs6Iz6Dc)
+
 ## Dependencies
 
 - Cmake
@@ -34,6 +40,10 @@ cmake --build .
 ```
 
 ### Credits
+
+NISI Guillaume  
+FIGUEIREDO Alex          
+PETIT Denis     
 
 ECS largly thanks to : 
 
