@@ -2,9 +2,11 @@
 
 ## Information
 
-Quack Engine is a game engine made in 5 months as a student project
+Quack Engine is a game engine made in 5 months as a student project 
 
-[Showcase video](https://youtu.be/FZiCs6Iz6Dc)
+Original Repostery : https://gitlab.com/quack-engine/engine
+
+Showcase video : https://youtu.be/FZiCs6Iz6Dc
 
 ## Dependencies
 
